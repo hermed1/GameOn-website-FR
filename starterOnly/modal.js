@@ -43,13 +43,13 @@ function validate(event) {
 //validation longueur champ nom
 function nameValidation() {
   const name = document.querySelector('#last');
-  const displayNameErrorMessage = document.querySelector('.nameErrorMessage');
+  const nameErrorMessage = document.querySelector('.nameErrorMessage');
   if (name.value.length < 2) {
-    displayNameErrorMessage.classList.add('errorMessageDisplayed');
+    nameErrorMessage.classList.add('errorMessageDisplayed');
     name.style.border = 'red solid 2px';
     console.log(name.value.length);
   } else {
-    displayNameErrorMessage.classList.remove('errorMessageDisplayed');
+    nameErrorMessage.classList.remove('errorMessageDisplayed');
     name.style.border = 'none';
   }
 }
@@ -57,20 +57,31 @@ function nameValidation() {
 
 function firstNameValidation() {
   const firstName = document.querySelector('#first');
-  const displayFirstNameErrorMessage = document.querySelector(
+  const firstNameErrorMessage = document.querySelector(
     '.firstNameErrorMessage'
   );
   if (firstName.value.length < 2) {
-    displayFirstNameErrorMessage.classList.add('errorMessageDisplayed');
+    firstNameErrorMessage.classList.add('errorMessageDisplayed');
     firstName.style.border = '2px solid red';
   } else {
-    displayFirstNameErrorMessage.classList.remove('errorMessageDisplayed');
+    firstNameErrorMessage.classList.remove('errorMessageDisplayed');
     firstName.style.border = 'none';
   }
 }
 
-// vérification date de naissance
-// function birthdateValidation() {
-//   const birthdate = document.querySelector('#birthdate');
-//   console.log(birthdate.value);
-// }
+//vérification date de naissance
+
+function birthdateValidation() {
+  const birthdate = document.querySelector('#birthdate');
+  const birthdateErrorMessage = document.querySelector(
+    '.birthdateErrorMessage'
+  );
+
+  if (!birthdate.value) {
+    birthdateErrorMessage.classList.add('errorMessageDisplayed');
+    birthdate.style.border = '2px solid red';
+  } else {
+    birthdateErrorMessage.classList.remove('errorMessageDisplayed');
+    birthdate.style.border = 'none';
+  }
+}

@@ -541,7 +541,8 @@ footer {
 
 /* Cacher le message d'erreur */
 .nameErrorMessage,
-.firstNameErrorMessage {
+.firstNameErrorMessage,
+.birthdateErrorMessage {
   display: none;
   font-size: 12px;
   margin-left: -7px;
@@ -550,7 +551,4 @@ footer {
 .errorMessageDisplayed {
   display: block;
   color: red;
-}
-.birthdateErrorMessage {
-  display: none;
 }
