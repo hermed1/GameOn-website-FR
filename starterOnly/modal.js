@@ -25,3 +25,17 @@ function launchModal() {
 function closeModal() {
   modalbg.style.display = 'none';
 }
+
+//Confirmation message
+
+function validate(event) {
+  event.preventDefault(); // Empêche le rechargement de la page
+  const confirmationMessage = document.querySelector('.confirmation-message');
+  confirmationMessage.classList.toggle('confirmation-message-displayed');
+  closeModal();
+
+  // Fait disparaître le message de confirmation après 1 seconde
+  setTimeout(() => {
+    confirmationMessage.classList.toggle('confirmation-message-displayed');
+  }, 1500);
+}
