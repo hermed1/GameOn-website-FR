@@ -538,3 +538,19 @@ footer {
 .confirmation-message-displayed {
   display: block;
 }
+
+/* Cacher le message d'erreur */
+.nameErrorMessage,
+.firstNameErrorMessage {
+  display: none;
+  font-size: 12px;
+  margin-left: -7px;
+}
+
+.errorMessageDisplayed {
+  display: block;
+  color: red;
+}
+.birthdateErrorMessage {
+  display: none;
+}
